@@ -19,7 +19,7 @@ let double = "double-quoted";
 let backticks = `backticks`;
 ```
 
-Single and double quotes are essentially the same. Backticks however allow us to embed any expression into the string, including function calls:
+Single and double quotes are essentially the same. Backticks, however, allow us to embed any expression into the string, including function calls:
 
 ```js run
 function sum(a, b) {
@@ -49,7 +49,7 @@ let guestList = "Guests:  // Error: Unexpected token ILLEGAL
 
 Single and double quotes come from ancient times of language creation when the need for multiline strings was not taken into account. Backticks appeared much later and thus are more versatile.
 
-Backticks also allow us to specify a "template function" before the first backtick. The syntax is: <code>func&#96;string&#96;</code>. The function `func` is called automatically, receives the string and embedded expressions and can process them. You can read more about it in the [docs](mdn:JavaScript/Reference/Template_literals#Tagged_template_literals). This is called "tagged templates". This feature makes it easier to wrap strings into custom templating or other functionality, but it is rarely used.
+Backticks also allow us to specify a "template function" before the first backtick. The syntax is: <code>func&#96;string&#96;</code>. The function `func` is called automatically, receives the string and embedded expressions and can process them. You can read more about it in the [docs](mdn:/JavaScript/Reference/Template_literals#Tagged_template_literals). This is called "tagged templates". This feature makes it easier to wrap strings into custom templating or other functionality, but it is rarely used.
 
 
 ## Special characters
@@ -88,8 +88,8 @@ Examples with unicode:
 
 ```js run
 alert( "\u00A9" ); // ©
-alert( "\u{20331}" ); // 𠌱, a rare chinese hieroglyph (long unicode)
-alert( "\u{1F60D}"); // a smiling face sumbol (another long unicode)
+alert( "\u{20331}" ); // 佫, a rare chinese hieroglyph (long unicode)
+alert( "\u{1F60D}" ); // 😍, a smiling face symbol (another long unicode)
 ```
 
 All special characters start with a backslash character `\`. It is also called an "escape character".
@@ -166,7 +166,7 @@ alert( str.charAt(1000) ); // '' (an empty string)
 We can also iterate over characters using `for..of`:
 
 ```js run
-for(let char of "Hello") {
+for (let char of "Hello") {
   alert(char); // H,e,l,l,o (char becomes "H", then "e", then "l" etc)
 }
 ```
@@ -379,8 +379,8 @@ There are 3 methods in JavaScript to get a substring: `substring`, `substr` and 
 
     ```js run
     let str = "stringify";
-    alert( str.slice(0,5) ); // 'strin', the substring from 0 to 5 (not including 5)
-    alert( str.slice(0,1) ); // 's', from 0 to 1, but not including 1, so only character at 0
+    alert( str.slice(0, 5) ); // 'strin', the substring from 0 to 5 (not including 5)
+    alert( str.slice(0, 1) ); // 's', from 0 to 1, but not including 1, so only character at 0
     ```
 
     If there is no second argument, then `slice` goes till the end of the string:
@@ -548,7 +548,7 @@ For instance:
 alert( 'Österreich'.localeCompare('Zealand') ); // -1
 ```
 
-This method actually has two additional arguments specified in [the documentation](mdn:js/String/localeCompare), which allow it to specify the language (by default taken from the environment) and setup additional rules like case sensivity or should `"a"` and `"á"` be treated as the same etc.
+This method actually has two additional arguments specified in [the documentation](mdn:js/String/localeCompare), which allows it to specify the language (by default taken from the environment) and setup additional rules like case sensitivity or should `"a"` and `"á"` be treated as the same etc.
 
 ## Internals, Unicode
 

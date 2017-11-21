@@ -5,7 +5,7 @@ Let's start with an example.
 This handler is assigned to `<div>`, but also runs if you click any nested tag like `<em>` or `<code>`:
 
 ```html autorun height=60
-<div onclick="alert('The handler !')">
+<div onclick="alert('The handler!')">
   <em>If you click on <code>EM</code>, the handler on <code>DIV</code> runs.</em>
 </div>
 ```
@@ -50,7 +50,7 @@ The process is called "bubbling", because events "bubble" from the inner element
 ```warn header="*Almost* all events bubble."
 The key word in this phrase is "almost".
 
-For instance, a `focus` event does not bubble. There are other examples too, we'll meet them. But still it's an exception, rather then a rule, most events do bubble.
+For instance, a `focus` event does not bubble. There are other examples too, we'll meet them. But still it's an exception, rather than a rule, most events do bubble.
 ```
 
 ## event.target
